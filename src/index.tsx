@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.css';
+import './styles/lib.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { AuthStateContextProvider } from './contexts/AuthStateContextProvider';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <AuthStateContextProvider>
+      <App />
+    </AuthStateContextProvider>
   </React.StrictMode>
 );
 

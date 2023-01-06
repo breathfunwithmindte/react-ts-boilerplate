@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700|Open+Sans:wght@400;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  width: 100vw; height: 100vh; overflow: hidden;
+}
+
+.homepage {
+  width: 100vw;
+  height: 100vh;
+}
+
+.d-flex { display: flex; }
+.f-col { flex-direction: column; }
+.f-wrp { flex-wrap: wrap; }
+.a-i-center { align-items: center; }
+.a-i-flexend { align-items: flex-end; }
+.a-i-flexstart { align-items: flex-start; }
+.a-i-stretch { align-items: stretch; }
+.a-i-baseline { align-items: baseline; }
+.j-c-center { justify-content: center; }
+.j-c-flexend { justify-content: flex-end; }
+.j-c-right { justify-content: flex-end; }
+.j-c-left { justify-content: flex-start; }
+.j-c-flexstart { justify-content: flex-start; }
+.j-c-between { justify-content: space-between; }
+.j-c-around { justify-content: space-around; }
+.j-c-evenly { justify-content: space-evenly; }
+
+.sp-1 { padding: var(--space-1) }
+.sp-2 { padding: var(--space-2) }
+.sp-3 { padding: var(--space-3) }
+.sp-4 { padding: var(--space-4) }
+.sp-5 { padding: var(--space-5) }
+.spl-1 { padding-left: var(--space-1) }
+.spl-2 { padding-left: var(--space-2) }
+.spl-3 { padding-left: var(--space-3) }
+.spl-4 { padding-left: var(--space-4) }
+.spl-5 { padding-left: var(--space-5) }
+.spr-1 { padding-right: var(--space-1) }
+.spr-2 { padding-right: var(--space-2) }
+.spr-3 { padding-right: var(--space-3) }
+.spr-4 { padding-right: var(--space-4) }
+.spr-5 { padding-right: var(--space-5) }
+.spt-1 { padding-top: var(--space-1) }
+.spt-2 { padding-top: var(--space-2) }
+.spt-3 { padding-top: var(--space-3) }
+.spt-4 { padding-top: var(--space-4) }
+.spt-5 { padding-top: var(--space-5) }
+.spb-1 { padding-bottom: var(--space-1) }
+.spb-2 { padding-bottom: var(--space-2) }
+.spb-3 { padding-bottom: var(--space-3) }
+.spb-4 { padding-bottom: var(--space-4) }
+.spb-5 { padding-bottom: var(--space-5) }
+.spx-1 { padding-left: var(--space-1); padding-right: var(--space-1) }
+.spx-2 { padding-left: var(--space-2); padding-right: var(--space-2) }
+.spx-3 { padding-left: var(--space-3); padding-right: var(--space-3) }
+.spx-4 { padding-left: var(--space-4); padding-right: var(--space-4) }
+.spx-5 { padding-left: var(--space-5); padding-right: var(--space-5) }
+.spy-1 { padding-top: var(--space-1); padding-bottom: var(--space-1) }
+.spy-2 { padding-top: var(--space-2); padding-bottom: var(--space-2) }
+.spy-3 { padding-top: var(--space-3); padding-bottom: var(--space-3) }
+.spy-4 { padding-top: var(--space-4); padding-bottom: var(--space-4) }
+.spy-5 { padding-top: var(--space-5); padding-bottom: var(--space-5) }
+
+.m-1 { margin: var(--space-1) }
+.m-2 { margin: var(--space-2) }
+.m-3 { margin: var(--space-3) }
+.m-4 { margin: var(--space-4) }
+.m-5 { margin: var(--space-5) }
+.ml-1 { margin-left: var(--space-1) }
+.ml-2 { margin-left: var(--space-2) }
+.ml-3 { margin-left: var(--space-3) }
+.ml-4 { margin-left: var(--space-4) }
+.ml-5 { margin-left: var(--space-5) }
+.mr-1 { margin-right: var(--space-1) }
+.mr-2 { margin-right: var(--space-2) }
+.mr-3 { margin-right: var(--space-3) }
+.mr-4 { margin-right: var(--space-4) }
+.mr-5 { margin-right: var(--space-5) }
+.mt-1 { margin-top: var(--space-1) }
+.mt-2 { margin-top: var(--space-2) }
+.mt-3 { margin-top: var(--space-3) }
+.mt-4 { margin-top: var(--space-4) }
+.mt-5 { margin-top: var(--space-5) }
+.mb-1 { margin-bottom: var(--space-1) }
+.mb-2 { margin-bottom: var(--space-2) }
+.mb-3 { margin-bottom: var(--space-3) }
+.mb-4 { margin-bottom: var(--space-4) }
+.mb-5 { margin-bottom: var(--space-5) }
+.mx-1 { margin-left: var(--space-1); margin-right: var(--space-1) }
+.mx-2 { margin-left: var(--space-2); margin-right: var(--space-2) }
+.mx-3 { margin-left: var(--space-3); margin-right: var(--space-3) }
+.mx-4 { margin-left: var(--space-4); margin-right: var(--space-4) }
+.mx-5 { margin-left: var(--space-5); margin-right: var(--space-5) }
+.my-1 { margin-top: var(--space-1); margin-bottom: var(--space-1) }
+.my-2 { margin-top: var(--space-2); margin-bottom: var(--space-2) }
+.my-3 { margin-top: var(--space-3); margin-bottom: var(--space-3) }
+.my-4 { margin-top: var(--space-4); margin-bottom: var(--space-4) }
+.my-5 { margin-top: var(--space-5); margin-bottom: var(--space-5) }
+
+
+.w-1 { width: var(--width-1) }
+.w-2 { width: var(--width-2) }
+.w-3 { width: var(--width-3) }
+.w-4 { width: var(--width-4) }
+.w-5 { width: var(--width-5) }
+.h-1 { height: var(--height-1) }
+.h-2 { height: var(--height-2) }
+.h-3 { height: var(--height-3) }
+.h-4 { height: var(--height-4) }
+.h-5 { height: var(--height-5) }
+.w-f { width: 100%; }
+.h-f { height: 100%; }
+
+.bg-1 { background-color: var(--background-1) }
+.bg-2 { background-color: var(--background-2) }
+.bg-3 { background-color: var(--background-3) }
+.bg-4 { background-color: var(--background-4) }
+.bg-5 { background-color: var(--background-5) }
+.pr-1 { background-color: var(--primary-1) }
+.pr-2 { background-color: var(--primary-2) }
+.pr-3 { background-color: var(--primary-3) }
+.pr-4 { background-color: var(--primary-4) }
+.pr-5 { background-color: var(--primary-5) }
+.sec-1 { background-color: var(--secondary-1) }
+.sec-2 { background-color: var(--secondary-2) }
+.sec-3 { background-color: var(--secondary-3) }
+.sec-4 { background-color: var(--secondary-4) }
+.sec-5 { background-color: var(--secondary-5) }
+.dng-1 { background-color: var(--danger-1) }
+.dng-2 { background-color: var(--danger-2) }
+.dng-3 { background-color: var(--danger-3) }
+.dng-4 { background-color: var(--danger-4) }
+.dng-5 { background-color: var(--danger-5) }
+.succ-1 { background-color: var(--success-1) }
+.succ-2 { background-color: var(--success-2) }
+.succ-3 { background-color: var(--success-3) }
+.succ-4 { background-color: var(--success-4) }
+.succ-5 { background-color: var(--success-5) }
+
+.f-size-1 { font-size: var(--font-size-1); }
+.f-size-2 { font-size: var(--font-size-2); }
+.f-size-3 { font-size: var(--font-size-3); }
+.f-size-4 { font-size: var(--font-size-4); }
+.f-size-5 { font-size: var(--font-size-5); }
+
+.c-1 { color: var(--color-1) }
+.c-2 { color: var(--color-2) }
+.c-3 { color: var(--color-3) }
+.c-4 { color: var(--color-4) }
+.c-5 { color: var(--color-5) }
+
+/** @BUTTON */
+button {
+  background-color: var(--background-1);
+  border: none;
+  border-radius: var(--space-5);
+  color: var(--color-1);
+  cursor: pointer;
+  font-size: var(--font-size-4);
+  padding: var(--space-4) var(--space-4);
+  transition: background-color 0.4s;
+}
+button:hover {
+  background-color: var(--background-5);
+}
+button:active {
+  background-color: var(--background-4);
+  box-shadow: 0 0 0 var(--hover-length-4) var(--background-5);
+  transform: scale(0.97);
+}
+button:disabled {
+  background-color: var(--background-5);
+  color: var(--color-2);
+  cursor: not-allowed;
+}
+
+/** @BUTTON-PRIMARY-SECONDARY-SUCCESS-DANGER */
+.btn-primary { background-color: var(--primary-1) !important; color: var(--primary-color) !important; }
+.btn-primary:hover { background-color: var(--primary-2) !important; }
+.btn-primary:active {
+  background-color: var(--primary-3) !important;
+  box-shadow: 0 0 0 var(--hover-length-4) var(--primary-5);
+}
+.btn-danger { background-color: var(--danger-1) !important; color: var(--danger-color) !important; }
+.btn-danger:hover { background-color: var(--danger-2) !important; }
+.btn-danger:active {
+  background-color: var(--danger-3) !important;
+  box-shadow: 0 0 0 var(--hover-length-4) var(--danger-5);
+}
+.btn-secondary { background-color: var(--secondary-1) !important; color: var(--secondary-color) !important; }
+.btn-secondary:hover { background-color: var(--secondary-2) !important; }
+.btn-secondary:active {
+  background-color: var(--secondary-3) !important;
+  box-shadow: 0 0 0 var(--hover-length-4) var(--secondary-5);
+}
+.btn-success { background-color: var(--success-1) !important; color: var(--success-color) !important; }
+.btn-success:hover { background-color: var(--success-2) !important; }
+.btn-success:active {
+  background-color: var(--success-3) !important;
+  box-shadow: 0 0 0 var(--hover-length-4) var(--success-5);
+}
+
+.hover-4:hover { background: var(--background-4) }
+.hover-5:hover { background: var(--background-5) }
+.btn { cursor: pointer; }
+.btn:active { transform: scale(0.97); }
+.avatar-1 { width: var(--width-5); height: var(--height-5); border-radius: 100%; border: var(--hover-length-1) solid var(--primary-3) }
+.avatar-2 { width: var(--width-5); height: var(--height-5); border-radius: 100%; border: var(--hover-length-2) solid var(--primary-3) }
+.avatar-3 { width: var(--width-5); height: var(--height-5); border-radius: 100%; border: var(--hover-length-3) solid var(--primary-3) }
+.avatar-4 { width: var(--width-5); height: var(--height-5); border-radius: 100%; border: var(--hover-length-4) solid var(--primary-3) }
+.avatar-5 { width: var(--width-5); height: var(--height-5); border-radius: 100%; border: var(--hover-length-5) solid var(--primary-3) }
+
+input {
+  background-color: var(--background-1);
+  border: none;
+  outline: none;
+  line-height: var(--font-size-3);
+  border-radius: calc(var(--space-5)/3);
+  color: var(--color-1);
+  font-size: var(--font-size-5);
+  padding: var(--space-4) var(--space-4);
+  width: var(--width-4);
+}
+
+input:hover {
+  box-shadow: 0 0 0 var(--hover-length-4) var(--background-5);
+}
+
+input:focus {
+  box-shadow: 0 0 0 var(--hover-length-4) var(--primary-4);
+}
+
+input::placeholder {
+  color: var(--color-2);
+}
+
+select {
+  background-color: var(--background-1);
+  border: none;
+  border-radius: var(--space-3);
+  color: var(--color-1);
+  font-size: var(--height-2);
+  padding: var(--space-2) var(--space-4);
+  width: var(--width-4);
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 var(--hover-length-4) var(--primary-4);
+}
+
+input[type="checkbox"] {
+  background-color: var(--background-1);
+  cursor: pointer;
+  margin: 0 var(--space-2);
+  padding: var(--space-4) var(--space-4);
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+}
+
+input[type="radio"] {
+  background-color: var(--background-1);
+  cursor: pointer;
+  margin: 0 var(--space-2);
+  padding: var(--space-4) var(--space-4);
+}
+
+input[type="radio"]:focus {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0.014rem;
+}
+
+a { color: var(--primary-1); }
+a:hover { color: var(--primary-3); }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--background-4);
+  margin: var(--space-3) 0;
+}
