@@ -2,6 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import logo from './logo.svg';
 import './styles/app.css';
 import FormPage from './pages/FormPage';
+import {
+  Route, 
+  Routes
+} from 'react-router-dom';
 
 import PageStateReducer from './reducers/FormPageReducer/FormPageReducer';
 import LoginFormState from './reducers/FormPageReducer/types/LoginPage';
@@ -13,6 +17,9 @@ import AuthenticatedLayout from './layouts/AuthenticatedLayout';
 import { useFetch } from './hooks/useFetch';
 import PageError from './types/PageError';
 import { useOnClickOutside } from './hooks/useOnClickOutside';
+import GenericForm from './components/GenericForm';
+import { Field } from './types/GenericForm';
+import FieldType from './enums/FieldType';
 
 
 function App() {
@@ -33,21 +40,22 @@ function App() {
   )
   return (
     <AuthenticatedLayout>
-      <div className="bg-2" style={{padding: "3.4rem"}}>
-      <h1>yeah authennticated</h1>
-      <input className="m-5" type="text" />
-      <button>some bnutton</button><br />
-      <button className="btn-primary">some bnutton</button><br /><hr />
-      <button className="btn-secondary">some bnutton</button><br /><hr />
-      <button className="btn-success">some bnutton</button><br /><hr />
-      <button className="btn-danger">some bnutton</button><br /><hr />
-      <input type="checkbox" /> <br />
-      <input type="checkbox" /><br />
-      <input type="checkbox" /><br />
-      <input type="radio" name="asdasd" id="asdasd" /><br />
-      <input type="radio" name="asdasd" id="asdasd" />
+      <div className="bg-2 w-f" style={{padding: "3.4rem"}}>
 
-      <div ref={ref}>Click anywhere outside this element to log a message</div>
+        <Routes>
+          <Route path="/" element={<div> Page 1 </div>} />
+          <Route path="/itsm/:pagename" element={<div> Page 2 </div>} />
+          <Route path="/itsm/incident" element={<div> Page 3 </div>} />
+          <Route path="/solutions" element={<div> Page 4 </div>} />
+          <Route path="/dbs" element={<div> Page 5 </div>} />
+        </Routes>
+
+        <GenericForm title={null} fields={[
+          { fieldName: "groupname", fieldType: FieldType.TEXTFIELD, label: "Group Name", placeholder: null  },
+          { fieldName: "groupname", fieldType: FieldType.TEXTFIELD, label: "Group Name", placeholder: null  },
+          { fieldName: "client_id", fieldType: FieldType.TEXTFIELD, label: "Client ID", placeholder: null  },
+          { fieldName: "client_secret", fieldType: FieldType.TEXTFIELD, label: "Client Secret", placeholder: null  }
+        ]} handleChange={(event: any, field: Field) => {console.log("hello")}} state={{}} />
 
       </div>
     </AuthenticatedLayout>
